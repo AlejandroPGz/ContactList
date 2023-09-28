@@ -10,146 +10,228 @@
   border-color: #e5e7eb;
   /* 2 */
   margin: 0;
-  font-family: 'Roboto', sans-serif;
-
 }
 
-html, body {
-    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
-    background-blend-mode: multiply,multiply;
-    /* background-image: url("https://www.imgacademy.com/sites/default/files/legacyhotel6.jpg"); */
-
-    background-size: cover;
-    background-attachment: fixed;
-    height: 100%;
-    width: 100%;
+body {
+    display: flex;
+    flex-direction: column;
     margin: 0;
-    padding: 0;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+
 }
 
-/* main */
-
-.main {
+#main {
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
 }
 
-/* form */
-
-.form {
-    height: 70%;
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    border-radius: 2rem;
-    /* background-color: rgba(123, 120, 142, 0.367); */
-
-    color: #fff;
-    border: 3px solid #fff;
-    box-shadow: 0px 0px 25px #222;
-    backdrop-filter: blur(5.5px);
-    
-    z-index: 20;
-}
-
-.form-title {
-    color: white;
-}
-
-.input {
-    height: 2rem;
-    width: 60%;
-    border-radius: 2rem;
-    text-align: left;
-    padding-left: 1rem;
-}
-
-.button {
-    height: 2rem;
-    width: 40%;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    color: #ffffff;
-    font-weight: 700;
-    background-color: #261f61;
-}
-.button:hover {
-    cursor: pointer;
-    background-color: #0f017e;
-
-
-}
-
-.span {
-    height: 2rem;
-    width: 80%;
-    font-size: 1rem;
-    font-weight: 700;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
+.divs-input {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.link {
-    text-decoration: none;
-    color: #0f017e;
-}
-.link:hover {
-    color: #2c2562;
-
-}
-
-/* wave */
-
-.wave {
-    height: 200px;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-
-    overflow: hidden;
+#form-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 12rem;
+    width: 80%;
 }
 
-.wave1 {
-    background: url(../svg/wave.svg);
-    background-size: 1000px;
-    width: 100%;
+#form {
+    background-color: #155e46;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 100%;
-
-    animation: animate 10s linear infinite;
-}
-.wave2 {
-    background: url(../svg/wave2.svg);
-    background-size: 1000px;
     width: 100%;
+    border-bottom: 1px solid #000000;
+}
+
+.boton {
+    border-radius: 0.7rem;
+    padding: 0;
+    height: 1.5rem;
+    width: 4rem;
+    background-color: lightgray;
+}
+.boton-activado {
+    background-color: #93c5d8;
+    font-weight: 700;
+}
+.boton-activado:hover {
+    cursor: pointer;
+}
+
+#lista {
+    height: 50%;
+    width: 80%;
+    display: flex;
+}
+
+#list {
+    background-color: #637b73;
+    padding: 0.5rem;
+    list-style: none;
+    overflow-y: scroll;
     height: 100%;
-
-    animation: animate 10s linear infinite;
-}
-@keyframes animate {
-    0% {
-        background-position-x: 0;
-    }
-    100% {
-        background-position-x: 1000px;
-    }
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
 }
 
 
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  ::-webkit-scrollbar-button {
+    border-radius: 0.5rem;
+  }
 
-@media (min-width: 1024px) {
-    .form {
-        width: 50%; 
-    }
+
+.butons {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputs {
+    padding: 0.4rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.inputs-edit {
+    width: 80%;
+}
+
+.svg-trash {
+    color: #000000;
+}
+
+#delete-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.delete-icon:hover {
+    cursor: pointer;
+    border-radius: 0.4rem;
+    background-color: rgba(255, 45, 45, 0.568);
+}
+#edit-boton {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+.boton-editar {
+    color: black;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.edit-icon:hover {
+    cursor: pointer;
+    border-radius: 0.4rem;
+    background-color: rgb(86 47 153 / 59%);}
+
+#text {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    border-radius: 0.4rem;
+    justify-content: center;
+    align-items: center;
+}
+
+
+li {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100% -0.5%;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+
+input {
+    margin: 0.5rem;
+    text-align: center;
+    background: #e7e7e7;
+}
+
+.error {
+    outline: 4px solid red;
+    
+}
+
+.success {
+    outline: 5px solid green;
+}
+
+.input-message {
+    display: none;
+}
+
+.show {
+    display: block;
+    color: red;
+    font-size: smaller;
+}
+
+.svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+.editando {
+    border: 3px solid rgb(61, 64, 255);
+    background-color: #F9F9F9;
+    box-shadow: 0px 0px 25px 0px;
+}
+
+h2 {
+    color: #F9F9F9;
+}
+
+.show-svg {
+    display: block;
+}
+.hide-svg {
+    display: none;
 }
